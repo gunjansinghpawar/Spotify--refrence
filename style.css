@@ -24,6 +24,7 @@ nav ul{
 
 nav ul li{
     padding: 0 12px;
+    cursor: pointer;
 }
 .brand img{
     width: 44px;

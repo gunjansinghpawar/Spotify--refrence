@@ -5,86 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Your fa-solidvourite music is here</title>
+    <title>My Player - My Favorite Songs</title>
+    <link rel="icon" href="/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script>
+        const handleAboutClick = () => {
+            window.location.href = "https://gunjansinghpawar.github.io/GUNJAN_PORTFOLLIO/";
+        }
+    </script>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li class="brand"><img src="logo.png" alt="Spotify"> My Player</li>
             <li>Home</li>
-            <li>About</li>
+            <li onclick="handleAboutClick()">Profile</li>
         </ul>
     </nav>
 
     <div class="container">
         <div class="songList">
-            <h1>Best of NCS - No Copyright Sounds</h1>
+            <h1>Favorite of Gunjan - No Copyright Sounds</h1>
             <div class="songItemContainer">
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="7"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="8"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
-                <div class="songItem">
-                    <img alt="1">
-                    <span class="songName">Let me Love You</span>
-                    <span class="songlistplay"><span class="timestamp">05:34 <i id="9"
-                                class="fa-solid fa-circle-play"></i> </span></span>
-                </div>
             </div>
         </div>
         <div class="songBanner"></div>
@@ -99,8 +45,8 @@
             <i class="fa-solid fa-3x fa-forward-step" id="next"></i>
         </div>
         <div class="songInfo">
-            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS
-                Release]</span>
+            <img src="playing.gif" width="42px" alt="" id="gif"> (----<span
+                id="masterSongName">Aakhir_Tumhein_Aana_Hai</span>----)
         </div>
     </div>
     <script src="script.js"></script>

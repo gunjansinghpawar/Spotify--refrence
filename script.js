@@ -10,18 +10,30 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    { songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
-    { songName: "Cielo - Huma-Huma", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
-    { songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/3.mp3", coverPath: "covers/3.jpg" },
-    { songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/4.mp3", coverPath: "covers/4.jpg" },
-    { songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/5.mp3", coverPath: "covers/5.jpg" },
-    { songName: "Rabba - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/6.jpg" },
-    { songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/7.jpg" },
-    { songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg" },
-    { songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg" },
-    { songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg" },
+    { songName: "Aakhir_Tumhein_Aana_Hai", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Aankhon_Mein_Teri_Ajab_Si", filePath: "songs/2.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Bulleya", filePath: "songs/3.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Born_To_Shine", filePath: "songs/4.mp3", coverPath: "covers/1.jpg" },
+    { songName: "EK_MULAQAT", filePath: "songs/5.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Angaaron", filePath: "songs/6.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Ek_Haseena_Thi", filePath: "songs/7.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Haye_Mera_DIL", filePath: "songs/8.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Mere_Sapno_Ki_Rani_Kab_Aayegi_Tu", filePath: "songs/9.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Pyaar_Tune_Kya_Kiya", filePath: "songs/10.mp3", coverPath: "covers/1.jpg" },
+    { songName: "Zara sa dil me de jagah tu", filePath: "songs/11.mp3", coverPath: "covers/1.jpg" },
 ]
-
+const songContainer = document.querySelector('.songItemContainer');
+songContainer.innerHTML = songs.map((song, index) => `
+    <div class="songItem">
+        <img src="${song.coverPath}" alt="${index + 1}">
+        <span class="songName">${song.songName}</span>
+        <span class="songlistplay">
+            <span class="timestamp">05:34 
+                <i id="${index}" class="fa-solid fa-circle-play songListPlay"></i>
+            </span>
+        </span>
+    </div>
+`).join('');
 songItems.forEach((element, i) => {
     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
